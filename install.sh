@@ -34,6 +34,7 @@ sudo apt-get install dnsutils;
 sudo add-apt-repository ppa:canonical-chromium-builds/stage
 sudo apt update
 sudo apt install chromium-browser
+sudo apt install postgresql postgresql-contrib
 sudo apt-get update -y;
 sudo apt-get upgrade -y;
 echo -e "[$GREEN+$RESET] Done.";
@@ -54,6 +55,7 @@ echo -e 'export PATH=$PATH:$HOME/go/bin/' >> $HOME/.bashrc;
 echo -e 'export PATH=$PATH:$GOROOT/bin' >> $HOME/.bashrc;
 echo -e 'export PATH=$PATH:$HOME/.local/bin' >> $HOME/.bashrc;
 echo -e "alias httprobe='$HOME/go/bin/httprobe'" >> $HOME/.bashrc;
+echo -e "alias findomain='$HOME/findomain-linux'" >> $HOME/.bashrc;
 sleep 1;
 source $HOME/.bashrc;
 cd $HOME  || return;
@@ -123,6 +125,11 @@ git clone https://github.com/Tuhinshubhra/CMSeeK;
 pip3 install -r $HOME/CMSeeK/requirements.txt;
 echo -e "for line in $(cat "/$HOME/Recon/$1/final_urls.txt");do python3 $HOME/CMSeeK/cmseek.py -u "$line" --no-redirect; done" > ./CMSeeK/sc;
 chmod +x ./CMSeeK/sc
+echo -e "[$GREEN+$RESET] Done."
+
+echo -e "[$GREEN+$RESET] Installing waybackMachine ";
+cd $HOME || return;
+wget https://github.com/Edu4rdSHL/findomain/releases/download/0.6.0/findomain-linux
 echo -e "[$GREEN+$RESET] Done."
 
 
