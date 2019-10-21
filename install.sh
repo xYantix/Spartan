@@ -56,6 +56,7 @@ echo -e 'export PATH=$PATH:$GOROOT/bin' >> $HOME/.bashrc;
 echo -e 'export PATH=$PATH:$HOME/.local/bin' >> $HOME/.bashrc;
 echo -e "alias httprobe='$HOME/go/bin/httprobe'" >> $HOME/.bashrc;
 echo -e "alias findomain='$HOME/findomain-linux'" >> $HOME/.bashrc;
+echo -e 'export findomain_discord_webhook='https://discordapp.com/api/webhooks/633582844525936641/cdT5dJZHlVrxcdpZ7ch8zBIJ5GNtSCkj_xvFAMbuJC4UQn5KNvPvZy6dwOoRS0sal-FZ' 
 sleep 1;
 source $HOME/.bashrc;
 cd $HOME  || return;
